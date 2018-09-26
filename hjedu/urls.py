@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from hjclass.views import getclass
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r"^class/(?P<class_name>\w+)", getclass)
 ]
